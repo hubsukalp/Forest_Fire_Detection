@@ -1,5 +1,3 @@
-
-
 import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
@@ -47,9 +45,9 @@ if uploaded_file is not None:
                 confidence_display = "< 0.01%"
             else:
                 confidence_display = f"{confidence:.2f}%"
-                st.info(f"Confidence: **{confidence_display}**")
+                st.info(f"Confidence: *{confidence_display}*")
 
 
             st.subheader("Result:")
-            st.success(f"Prediction: **{class_names[predicted_class]}**")
-            st.info(f"Confidence: **{confidence}%**")
+            st.success(f"Prediction: *{class_names[predicted_class]}*")
+            st.info(f"Confidence: *{confidence}%*")
